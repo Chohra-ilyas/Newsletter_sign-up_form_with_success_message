@@ -1,0 +1,316 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+:root{
+    --font-family: 'Roboto', sans-serif;
+    --font-size: 16px;
+    /*primary*/
+    --Tomato: hsl(4, 100%, 67%);
+    /*natural*/
+    --Dark-Slate-Grey: hsl(234, 29%, 20%);
+    --Charcoal-Grey: hsl(235, 18%, 26%);
+    --Grey: hsl(231, 7%, 60%);
+    --White: hsl(0, 0%, 100%);
+}
+*{
+    margin: 0;
+    padding: 0;
+}
+svg{
+    display: inline;
+}
+body{
+    font-family: var(--font-family);
+    background-color: var(--Charcoal-Grey);
+}
+form > label{
+    display: block;
+}
+p{
+    font-size: var(--font-size);
+}
+main{
+    position: absolute;
+    width: 900px;
+    height: 600px;
+    background-color: var(--White);
+    border-radius: 20px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    display: flex;
+    flex-flow: column wrap;
+}
+.left{
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: center;
+    width: 55%;
+    height: 100%;
+    border-radius: 20px 0 0 20px;
+}
+.right{
+    width: 40%;
+    height: 90%;
+    margin: auto;
+    background-image: url(assets/images/illustration-sign-up-desktop.svg);
+    background-repeat: no-repeat;
+    background-size: 100%;
+    overflow:hidden;
+    border-radius:  20px;
+}
+.right > svg{
+    width: 100%;
+    height: 100%;
+}
+.content{
+    height: 80%;
+    width: 85%;
+    margin: auto;
+}
+.content > h1{
+    font-size: 3.6rem;
+    color: var(--Dark-Slate-Grey);
+    margin: 15px 5px;
+}
+.content > p{
+    margin: 15px 0;
+}
+.content > p > svg{
+    margin-right: 8px;
+}
+.content > label{
+    margin-top: 30px;
+    font-size: 0.8rem;
+    font-weight: 700;
+    color: var(--Dark-Slate-Grey);
+}
+#gmail{
+    margin: 10px 0;
+    padding: 0 5%;
+    border: 1px var(--Grey) solid;
+    border-radius: 7px;
+    height: 50px;
+    width: 80%;
+    font-size: 1rem;
+}
+.button{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    text-align: center;
+    margin: 15px 0;
+    color: var(--White);
+    height: 50px;
+    width: 90%;
+    font-weight: 600;
+    font-size: 0.9rem;
+    border: transparent;
+    border-radius: 7px;
+    background-color: var(--Dark-Slate-Grey);
+}
+#gmail:hover{
+    border-color: var(--Charcoal-Grey);
+}
+.button:hover{
+    background : linear-gradient(to right,hsl(4, 100%, 67%),hsl(14, 89%, 56%));
+    border: none;
+}
+section{
+    position: absolute;
+    width: 450px;
+    height: 450px;
+    background-color: var(--White);
+    border-radius: 20px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    display: flex;
+    flex-flow: column wrap;
+    display: none;
+}
+section > div {
+    height: 80%;
+    width: 80%;
+    margin: auto;
+}
+section > div > svg {
+    background-color: var(--Tomato);
+    border-radius: 50%;
+}
+section > div > h2{
+    font-size: 2.5rem;
+    margin: 20px 0;
+    color: var(--Dark-Slate-Grey);
+}
+section > div > p > a{
+    text-decoration: none;
+    color: var(--Dark-Slate-Grey);
+    font-weight: 700;
+}
+section > div > p{
+    margin-bottom: 40px;
+}
+#dimiss{
+    width: 100%;
+    margin: auto;
+}
+.spn{
+    width: 90%;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+}
+#feild{
+    color: red;
+    display: none;
+}
+@media (min-width : 800px) and (max-width : 900px){
+    main{
+        width: 100%;
+    }
+    .right{
+        width: 47%;
+        background-size: cover;
+    }
+    .left{
+        width: 50%;
+    }
+    .content{
+        width: 95%;
+    }
+}
+@media (min-width : 550px) and (max-width : 800px){
+    body{
+        background-color: var(--White);
+    }
+    main{
+        top: 0%;
+        left: 0%;
+        transform: translate(0%,0%);
+        width: 100%;
+        height: auto;
+        flex-flow: column-reverse;
+        justify-content: start;
+        border-radius: 0;
+    }
+    main > .left{
+        width: 100%;
+        height: 40%;
+        border-radius:0;
+    }
+    .right{
+        width: 100%;
+        height: 400px;
+        margin: 0;
+        background-image: url(assets/images/illustration-sign-up-mobile.svg);
+        background-size: 100%;
+        border-radius: 0 0 20px 20px;
+    }
+    .content{
+        height: 100%;
+    }
+}
+@media (min-width : 375px) and (max-width : 550px){
+    body{
+        background-color: var(--White);
+    }
+    section{
+        top: 0%;
+        left: 0%;
+        transform: translate(0%,0%);
+        width: 100%;
+        height: 100%;
+        flex-flow: column-reverse;
+        justify-content: start;
+        border-radius: 0;
+    }
+    main{
+        top: 0%;
+        left: 0%;
+        transform: translate(0%,0%);
+        width: 100%;
+        height: 100%;
+        flex-flow: column-reverse;
+        justify-content: start;
+        border-radius: 0;
+    }
+    .left{
+        width: 100%;
+        height: 60%;
+        border-radius:0;
+    }
+    .right{
+        width: 100%;
+        height: 300px;
+        margin: 0;
+        background-image: url(assets/images/illustration-sign-up-mobile.svg);
+        background-size: 100%;
+        border-radius: 0 0 20px 20px;
+    }
+    .content > h1{
+        margin-top: 50px;
+        font-size: 2.5rem;
+    }
+    .content{
+        height: 100%;
+    }
+
+}
+@media (max-width : 375px){
+    body{
+        background-color: var(--White);
+    }
+    section{
+        top: 0%;
+        left: 0%;
+        transform: translate(0%,0%);
+        width: 100%;
+        height: 100%;
+        flex-flow: column-reverse;
+        justify-content: start;
+        border-radius: 0;
+    }
+    main{
+        top: 0%;
+        left: 0%;
+        transform: translate(0%,0%);
+        width: 100%;
+        height: auto;
+        flex-flow: column-reverse;
+        justify-content: start;
+        border-radius: 0;
+    }
+    .left{
+        width: 100%;
+        height: 60%;
+        border-radius:0;
+    }
+    .right{
+        width: 100%;
+        height: 240px;
+        margin: 0;
+        background-image: url(assets/images/illustration-sign-up-mobile.svg);
+        background-size: 100%;
+        border-radius: 0 0 20px 20px;
+    }
+    .content > h1{
+        font-size: 2rem;
+    }
+    .content{
+        height: 100%;
+    }
+}
+@media (max-height:600px) and (min-width:600px){
+    section{
+        top: 0%;
+        left: 50%;
+        transform: translate(-50%,0%);
+        width: 100wh;
+    }
+    main{
+        top: 0%;
+        left: 50%;
+        transform: translate(-50%,0%);
+        width: 100wh;
+    }
+}
