@@ -6,7 +6,7 @@ let email = document.getElementById('gmail');
 let newemail = document.getElementById('youremail');
 let feild = document.getElementById('feild');
 success.addEventListener('click',function(){
-    if(!email.value.match(/^[A-Za-z\._\-0-9]*[@][A-Za-z]*[\.][a-z]{2,4}$/)){
+    if(!email.value.match(/^[^\s@]+@[^\s@]+\.[^\s@]+$/)){
     feild.style.display='block';
     email.style.background='rgba(252, 103, 103, 0.336)';
     }
